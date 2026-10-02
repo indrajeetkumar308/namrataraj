@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://namrataraj.com/sitemap.xml
