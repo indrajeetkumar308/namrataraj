@@ -18,7 +18,7 @@
   ],
   "shortcuts": [
     { "name": "Breathe with me", "url": "/?source=app#breathe", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
-    { "name": "Get the book", "url": "/?source=app#book", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
-    { "name": "Live seminar", "url": "/?source=app#seminar", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] }
+    { "name": "Get the book", "url": "/book.html?source=app", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "Live seminar", "url": "/seminar.html?source=app", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] }
   ]
 }
