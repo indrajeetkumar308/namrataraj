@@ -776,10 +776,14 @@ const CALL_NOTE = '';
    FORM_ENDPOINTS block it prints here (replacing this one).
    While `action` is empty, readers are shown their answers with buttons to send them to Namrata directly. */
 //<FORM_ENDPOINTS>
+// Connected to Google Forms in indrajeetkumar308@gmail.com → Sheet "Namrata Raj – Website Responses"
 const FORM_ENDPOINTS = {
-  survey:  { action: '', entries: {} },
-  call:    { action: '', entries: {} },
-  seminar: { action: '', entries: {} }
+  survey: { action: 'https://docs.google.com/forms/d/e/1FAIpQLScxPSDDg2PHkj5PHF4PBxm37y2YpcAOqniUGOAnwAz84_XfPA/formResponse',
+    entries: { challenge:'entry.160836859', duration:'entry.1027367636', tried:'entry.140801644', whyFailed:'entry.19153115', fixOne:'entry.221436715', spent:'entry.1096006526', interest:'entry.668942416', yesFactor:'entry.1687842206', hesitation:'entry.1533857604', name:'entry.1821916332', age:'entry.577946463', city:'entry.2096607438', profession:'entry.1161574178', consent:'entry.708666797' } },
+  call: { action: 'https://docs.google.com/forms/d/e/1FAIpQLSe2u9vdx2fihLunVlFTXokpKT8JqLsGdQCBZJ4nbgMLYHe_8Q/formResponse',
+    entries: { name:'entry.2032238041', phone:'entry.334340127', city:'entry.562864858', profession:'entry.545112040', problem:'entry.203471828', whyNow:'entry.228371532', urgency:'entry.1330521301', commitment:'entry.1781297366', invest:'entry.1140379839', expectations:'entry.836251574', question:'entry.1178427341', consent:'entry.210486361' } },
+  seminar: { action: 'https://docs.google.com/forms/d/e/1FAIpQLSdDjZN0nPXzPge0tKBL44S28avoNiJETnIjdOmEUoOSvBW22Q/formResponse',
+    entries: { name:'entry.1932834211', phone:'entry.1382928844', email:'entry.640839124', city:'entry.1063761555', readBook:'entry.1951130276', focus:'entry.199086354', semQuestion:'entry.628851139', consent:'entry.1878635950' } }
 };
 //</FORM_ENDPOINTS>
 
