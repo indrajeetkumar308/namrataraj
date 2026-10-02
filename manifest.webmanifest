@@ -1,0 +1,24 @@
+{
+  "name": "Namrata Raj — The Ultimate Anxiety Reset",
+  "short_name": "Namrata Raj",
+  "description": "Breathe, reflect and grow with Namrata Raj — author of द अल्टीमेट एंग्जायटी रीसेट.",
+  "id": "/",
+  "start_url": "/?source=app",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FBF7F2",
+  "theme_color": "#0F3B44",
+  "lang": "en-IN",
+  "categories": ["books", "health", "lifestyle"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Breathe with me", "url": "/?source=app#breathe", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "Get the book", "url": "/?source=app#book", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "Live seminar", "url": "/?source=app#seminar", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] }
+  ]
+}
