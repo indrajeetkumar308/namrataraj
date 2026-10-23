@@ -362,11 +362,11 @@ const BOOK = {
   blurb:    'A simple, step-by-step guide in Hindi to calm your mind, ease stress and sleep better — using NLP.', // [DRAFT]
   language: 'Hindi',
   releaseDate: '2026-09-01T00:00:00+05:30',    // [CONFIRM] future date = "Pre-Order" + countdown
-  formats: { Paperback: 499, eBook: null },     // price in ₹ (null = price shown on the store) [CONFIRM eBook price]
+  formats: { Paperback: 499, eBook: 199 },     // price in ₹ (Kindle eBook)
   retailers: [                                 // [CONFIRM] empty url = hidden; readers are asked to message Namrata instead
     { name: 'Amazon',   url: 'https://www.amazon.in/dp/9374622807', formats:['Paperback'] },
     { name: 'Flipkart', url: 'https://www.flipkart.com/product/p/itme?pid=9789374622803', formats:['Paperback'] },
-    { name: 'Google Play Books', url: 'https://play.google.com/store/books/details?id=5ZsUEgAAQBAJ', formats:['eBook'] }
+    { name: 'Amazon Kindle', url: 'https://www.amazon.in/dp/B0HN2MWNMZ', formats:['eBook'] }
   ],
   hashtag: '#TheUltimateAnxietyReset',
   coverImg: 'cover.jpg',
@@ -872,9 +872,9 @@ function renderFormat(fmt){
   const pr=BOOK.formats[fmt]; $('#modalPrice').textContent = pr ? inr(pr) : 'eBook';
   $('#modalNote').textContent = isOut() ? 'Available now' : 'Ships ' + RELEASE.toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'});
   const live = BOOK.retailers.filter(r=>r.url && r.url!=='#' && (!r.formats || r.formats.includes(fmt)));
-  if(!pr) $('#modalNote').textContent = 'Read instantly on phone, tablet or computer · price shown on Google Play';
-  const BRAND = { Amazon:'bg-[#131921] text-white border-[#131921]', Flipkart:'bg-[#2874F0] text-white border-[#2874F0]', 'Google Play Books':'bg-[#01875F] text-white border-[#01875F]' };
-  const btn = (url,label) => `<a href="${url}" target="_blank" rel="noopener" class="lift rounded-xl border px-4 py-3.5 text-center text-sm font-semibold ${BRAND[label]||'border-ink/15 bg-white hover:border-sea-dark hover:text-sea-dark'}">${label==='Google Play Books'?'Read on Google Play Books':BRAND[label]?'Buy on '+label:label}</a>`;
+  if(!pr) $('#modalNote').textContent = 'Read instantly on phone, tablet or computer · Kindle app · free with Kindle Unlimited';
+  const BRAND = { Amazon:'bg-[#131921] text-white border-[#131921]', Flipkart:'bg-[#2874F0] text-white border-[#2874F0]', 'Amazon Kindle':'bg-[#FF9900] text-[#131921] border-[#FF9900]' };
+  const btn = (url,label) => `<a href="${url}" target="_blank" rel="noopener" class="lift rounded-xl border px-4 py-3.5 text-center text-sm font-semibold ${BRAND[label]||'border-ink/15 bg-white hover:border-sea-dark hover:text-sea-dark'}">${label==='Amazon Kindle'?'Read on Kindle':BRAND[label]?'Buy on '+label:label}</a>`;
   $('#retailers').innerHTML = live.length ? live.map((r,i)=>btn(r.url,r.name).replace('class="lift', live.length%2&&i===live.length-1?'class="col-span-2 lift':'class="lift')).join('') : `<p class="col-span-2 rounded-xl bg-sea/10 p-4 text-sm text-ink/75">To order your copy, send Namrata a message — she will personally share the details.</p>`
       + SOCIAL.filter(s=>s.id!=='youtube').map(s=>btn(s.url,'Message on '+s.label)).join('');
 }
@@ -1004,8 +1004,8 @@ const HI = {
   'A simple, step-by-step guide in Hindi to calm your mind, ease stress and sleep better — using NLP.':'NLP की मदद से मन को शांत करने, तनाव कम करने और बेहतर नींद के लिए हिंदी में आसान, स्टेप-बाय-स्टेप गाइड।',
   'A calm mind':'शांत मन', 'Less stress':'कम तनाव', 'Better sleep':'बेहतर नींद', 'Lasting inner peace':'स्थायी आंतरिक शांति',
   'Hindi · Paperback · eBook':'हिंदी · पेपरबैक · ई-बुक', 'Releases in':'रिलीज़ में', 'Available now on':'अभी उपलब्ध है',
-  'Buy on Amazon':'Amazon पर खरीदें', 'Buy on Flipkart':'Flipkart पर खरीदें', 'eBook on Google Play':'Google Play पर ई-बुक',
-  'Read on Google Play Books':'Google Play Books पर पढ़ें', 'Paperback':'पेपरबैक', 'eBook':'ई-बुक', 'Available now':'अभी उपलब्ध',
+  'Buy on Amazon':'Amazon पर खरीदें', 'Buy on Flipkart':'Flipkart पर खरीदें', 'Kindle eBook ₹199':'Kindle ई-बुक ₹199',
+  'Read on Kindle':'Kindle पर पढ़ें', 'Paperback':'पेपरबैक', 'eBook':'ई-बुक', 'Available now':'अभी उपलब्ध',
   'The path inside the book':'किताब का रास्ता', 'Heal':'हील', 'Rewire':'रीवायर', 'Rise':'राइज़',
   'Understand your worry — gently, without blame.':'अपनी चिंता को समझें — प्यार से, बिना ख़ुद को दोष दिए।',
   'Simple NLP steps to change old patterns.':'पुराने पैटर्न बदलने के आसान NLP कदम।',
